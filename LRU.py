@@ -54,10 +54,4 @@ def main():
         print("All test cases are passed")
 if __name__ == "__main__":
     main()
-               
-
-
-
-
-
-
+    
