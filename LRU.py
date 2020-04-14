@@ -1,19 +1,20 @@
 class LRU:
 
-    def _init_(self):
+    def __init__(self):
         self.list = []
 
-    def put(self):
-        pass   
+    def put(self,a):
+        self.list.append(a)   
     def get(self):
-        pass
+        return self.list.pop()
+        
     def getcache(self):
-        pass    
+        return self.list    
 
 
 class LRU_test:
 
-    def _init_(self):
+    def __init__(self):
         self.toy = LRU()
         self.total = 0
 
@@ -28,7 +29,7 @@ class LRU_test:
     def test_get(self):
         value = self.toy.get()
 
-         try:
+        try:
             assert self.toy.list == []
             self.total = self.total+1
         except Exception as e:
@@ -51,7 +52,7 @@ def main():
     box.test_getcache()
     if box.total == 3:
         print("All test cases are passed")
-if__name__ == "__main__":
+if __name__ == "__main__":
     main()
                
 
